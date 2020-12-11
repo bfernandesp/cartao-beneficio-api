@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cartao.beneficio.entity.Cartao;
@@ -93,7 +94,7 @@ public class CartaoController {
 			@ApiResponse(code = 400, message = "Erro ao deletar Cartao.")
 	})
 	@DeleteMapping
-	public ResponseEntity deletarCartao(@Param("idCartao") Long idCartao) {
+	public ResponseEntity deletarCartao(@RequestParam(value="idCartao", required=true) Long idCartao) {
 		log.info("Deletar Cartao ID > " + idCartao);
 		
 		try {
