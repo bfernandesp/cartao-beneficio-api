@@ -88,7 +88,7 @@ public class CartaoController {
 	}
 	
 	@SuppressWarnings("rawtypes")
-	@ApiOperation(value="Alterar Cartao", response=ResponseEntity.class, responseContainer = "Set")
+	@ApiOperation(value="Deletar Cartao", response=ResponseEntity.class, responseContainer = "Set")
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "Retorno com OK de cartao deletado."),
 			@ApiResponse(code = 400, message = "Erro ao deletar Cartao.")
