@@ -39,6 +39,7 @@ public class CartaoService {
 		entity.setValidadeMes(cartao.getValidadeMes());
 		entity.setValidadeAno(cartao.getValidadeAno());
 		entity.setFlagTipoBeneficio(cartao.getFlagTipoBeneficio());
+		entity.setSaldo(cartao.getSaldo());
 		validarCampos(entity);
 		cartaoRepository.save(entity);
 	}
